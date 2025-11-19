@@ -37,7 +37,16 @@ namespace MyList {
             head = tail = nullptr;
         }
         ~List() {
+            DNode<U>* p = head;
+            DNode<U>* pDel = head;
 
+            while (p != nullptr) {
+                pDel = p;
+                p = p->next;
+
+                cout << "Delete: " << pDel->info << endl;
+                delete pDel;
+            }
         }
 
         void push_back(U value) {
@@ -69,7 +78,15 @@ namespace MyList {
         }
 
         void reverseShow()const {
+            DNode<U>* p = tail;
 
+            if (p == nullptr) cout << "List is empty!\n";
+            else {
+                while (p != nullptr) {
+                    p->showNode();
+                    p = p->prev;
+                }
+            }
         }
 
     };
