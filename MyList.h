@@ -68,6 +68,10 @@ namespace MyList {
             }
         }
 
+        void reverseShow()const {
+
+        }
+
     };
 }
 
