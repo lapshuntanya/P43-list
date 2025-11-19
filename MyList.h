@@ -11,17 +11,20 @@ using std::endl;
 
 namespace MyList {
     template  <typename T>
-    class Node {
+    class DNode {
     public:
         T info;
-        Node* next;
+        DNode* next;
+        DNode* prev;
 
-        Node(T value) {
+        DNode(T value) {
             info = value;
-            next = nullptr;
+            next = prev =  nullptr;
         }
         void showNode()const {
-            cout << "INFO: " << info << " NEXT: " << next << endl;
+            cout << "INFO: " << info
+            << "\t PREV: " << prev
+            << "\t NEXT: " << next << endl;
         }
     };
 }
