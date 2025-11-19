@@ -3,4 +3,5 @@ project(P43_list)
 
 set(CMAKE_CXX_STANDARD 20)
 
-add_executable(P43_list main.cpp)
+add_executable(P43_list main.cpp
+        MyList.h)
