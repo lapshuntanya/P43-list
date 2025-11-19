@@ -14,6 +14,13 @@ int main() {
     third.next = &fourth;
 
 
+    //Обхід списку
+    MyList::Node<int>* p = &first;
+    while (p != nullptr) {
+        p->showNode();
+        p= p->next;
+    }
+
 
 
     return 0;
