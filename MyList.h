@@ -56,6 +56,18 @@ namespace MyList {
             }
         }
 
+        void shoInfo()const {
+            DNode<U>* p = head;
+
+            if (p == nullptr) cout << "List is empty!\n";
+            else {
+                while (p != nullptr) {
+                    p->showNode();
+                    p = p->next;
+                }
+            }
+        }
+
     };
 }
 
